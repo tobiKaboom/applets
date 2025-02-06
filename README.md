@@ -1,2 +1,2 @@
 # applets
-just a set of fun applets in c!
+just some fun applets in c!
