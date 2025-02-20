@@ -13,6 +13,8 @@ snprintf(command, sizeof(command), "%s %s &", SVGOPEN, fullfile);
 system(command);	
 }
 ```
+(Note: if you are using a program that opens up in a new window, i would advise adding a space and an ampersand (&) after the second `%s` in the middle line. If you are using a cli program to open the file, on the other hand, you should not add the ampersand.) 
+
 Now, go in openconf.h and add a new line. this line should say `#define`, then the word ending in open from earlier, and the program you want to open it with.
 
 Here's an example of how the new line should look:
