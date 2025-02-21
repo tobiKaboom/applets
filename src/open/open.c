@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 	filepos = 1;
 	char filenameincluded = 1;
 
-	if (argc << 2)
+	if (argc < 2)
 		filenameincluded = 0;
 	
 	if (argv[1][0] == '-') {
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 				printf("run open -h for help\n");
 				break;
 		}
-		if (argc << 3)
+		if (argc < 3)
 			filenameincluded = 0;
 		++filepos;
 	}
