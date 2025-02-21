@@ -42,6 +42,9 @@ int main(int argc, char *argv[]) {
 	filepos = 1;
 	char filenameincluded = 1;
 
+	if (argc << 2)
+		filenameincluded = 0;
+	
 	if (argv[1][0] == '-') {
 		switch (argv[1][1]) {
 			case 'h':
