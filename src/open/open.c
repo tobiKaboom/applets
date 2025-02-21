@@ -7,7 +7,7 @@ void* getextension(char fullfilename[]) {
 	static char extension[128];
 	char dotenc = 0;
 	short i;
-	short e = 0; 
+	short e = 0;
 
 	for (i = 0; fullfilename[i] != '\0'; ++i) {
 		if (dotenc == 0) {
@@ -33,13 +33,14 @@ void openfilewith(char fullfile[], char extension[]) {
 		system(command);
 	} else if (strcmp(extension, "jpg") == 0 || strcmp(extension, "png") == 0 || strcmp(extension, "heic") == 0) {
 		snprintf(command, sizeof(command), "%s %s &", IMGOPEN, fullfile);
-		system(command);	
+		system(command);
 	}
 }
 
 int main(int argc, char *argv[]) {
 	int filepos;
 	filepos = 1;
+	char filenameincluded = 1;
 
 	if (argv[1][0] == '-') {
 		switch (argv[1][1]) {
@@ -61,9 +62,13 @@ int main(int argc, char *argv[]) {
 				printf("run open -h for help\n");
 				break;
 		}
+		if (argc << 3)
+			filenameincluded = 0;
 		++filepos;
 	}
-	
-	char* extension = getextension(argv[filepos]);
-	openfilewith(argv[filepos], extension);
+
+	if (filenameincluded) { 
+		char* extension = getextension(argv[filepos]);
+		openfilewith(argv[filepos], extension); 
+	}
 }
