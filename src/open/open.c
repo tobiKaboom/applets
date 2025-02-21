@@ -44,10 +44,21 @@ int main(int argc, char *argv[]) {
 	if (argv[1][0] == '-') {
 		switch (argv[1][1]) {
 			case 'h':
-				printf("open - opens files\n");
+				printf("  \n");
+				printf("        __________ \t\033[1;33mopen 1.0 - opens your files with what you want!\033[1;0m\n");
+				printf("      /          /|\tusage: open [optional flags] [filename.extension]\n");
+				printf("    /__________/  |\t\n");
+				printf("    |_________ |  |\tvalid flags:\n");
+				printf("   /--._____ /||  |\t-h: show this help message\n");
+				printf("  |\"._____.\"| ||  |\t\n");
+				printf("  '_________'/_|  |\t\t~ascii art by Cristopher Johnson\n");
+				printf("    ||\".____.\"||  /\t\n");
+				printf("    |'--------'| / \t\n");
+				printf("    '----------'/  \t\n  \n");
 				break;
 			default:
 				printf("unrecognized flag\n");
+				printf("run open -h for help\n");
 				break;
 		}
 		++filepos;
