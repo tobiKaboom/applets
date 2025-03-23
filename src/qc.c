@@ -26,45 +26,49 @@ void power(double l1, double l2) {
 }
 
 int main(int argc, char *argv[]) {
-	if (argc < 2)
+	if (argc < 2) {
 		helpmessage();
-	else if (argv[1][0] == '-') {
+		return 1;
+	}
+	if (argv[1][0] == '-') {
 		char* end;
 		double n1;
 		double n2;
 		switch (argv[1][1]) {
 			case 'h':
 				helpmessage();	
-				break; 
+				return 0;
 			case 'p':
 				n1 = strtod(argv[2], &end);
 				n2 = strtod(argv[3], &end);
 				printf("  %f + %f = %f\n", n1, n2, n1+n2);
-				break;
+				return 0;
 			case 'm':
 				n1 = strtod(argv[2], &end);
 				n2 = strtod(argv[3], &end);
 				printf("  %ld - %f = %f\n", n1, n2, n1-n2);
-				break;
+				return 0;
 			case 't':
 				n1 = strtod(argv[2], &end);
 				n2 = strtod(argv[3], &end);
 				printf("  %f * %f = %f\n", n1, n2, n1*n2);
-				break;
+				return 0;
 			case 'd':
 				n1 = strtod(argv[2], &end);
 				n2 = strtod(argv[3], &end);
 				printf("  %f : %f = %f\n", n1, n2, n1/n2);
-				break;
+				return 0;
 			case 'w':
 				n1 = strtod(argv[2], &end);
 				n2 = strtod(argv[3], &end);
 				power(n1, n2);
-				break;
+				return 0;
 			default:
 				printf("unknown flag\n");
-				break;
+				return 1;
 		}
-	} else
+	} else {
 		helpmessage();
+		return 1;
+	}
 }
