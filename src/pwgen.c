@@ -24,5 +24,17 @@ void* pwgen(int charcount) {
 }
 
 int main(int argc, char *argv[]) {
-	printf("%s\n", pwgen(atoi(argv[1])));
+	int i;
+	int pwamount;
+
+	if (argc < 2)
+		return 1;
+	else if (argc < 3)
+		pwamount = 5;
+	else
+		pwamount = atoi(argv[2]);
+
+	for (i = 0; i < pwamount; i++) {
+		printf("%s\n", pwgen(atoi(argv[1])));
+	}
 }
