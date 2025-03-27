@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 
+void helpmessage() {
+	printf("\033[1;0m\n");
+	printf("\033[1;33mpwgen - generate (insecure) passwords!\n");
+	printf("\033[1;0musage: pwgen [flags] [password lenght] [amount of passwords]\n");
+	printf("\n");
+	printf("flags:\n");
+	printf("-h: displays this help message\n\n");
+}
+
 int randomnumber(int max) {
 	struct timespec ts;
     	timespec_get(&ts, TIME_UTC);
@@ -28,10 +37,10 @@ int main(int argc, char *argv[]) {
 	int pwamount;
 	int pwlen;
 	
-	if (argv[1][0] == '-') {
+	if (argc > 1 && argv[1][0] == '-') {
 		switch (argv[1][1]) {
 			case 'h':
-				printf("temporary help message\n");
+				helpmessage();
 				return 0;
 		}
 	}
