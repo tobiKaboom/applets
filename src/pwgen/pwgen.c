@@ -27,6 +27,14 @@ int main(int argc, char *argv[]) {
 	int i;
 	int pwamount;
 	int pwlen;
+	
+	if (argv[1][0] == '-') {
+		switch (argv[1][1]) {
+			case 'h':
+				printf("temporary help message\n");
+				return 0;
+		}
+	}
 
 	if (argc == 1) {
 		pwlen = 12;
