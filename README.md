@@ -1,4 +1,4 @@
 # applets
-just some fun applets in c!
+some applets made for practice in C, shell and python
 
-(do NOT ask why these are fun)
+enjoy! :)
