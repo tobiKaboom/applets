@@ -37,4 +37,6 @@ int main(int argc, char *argv[]) {
 	for (i = 0; i < pwamount; i++) {
 		printf("%s\n", pwgen(atoi(argv[1])));
 	}
+
+	return 0
 }
