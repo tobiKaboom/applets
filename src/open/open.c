@@ -49,6 +49,9 @@ void openfilewith(char fullfile[], char extension[]) {
 	} else if (strcmp(extension, "jpg") == 0 || strcmp(extension, "png") == 0 || strcmp(extension, "heic") == 0) {
 		snprintf(command, sizeof(command), "%s %s &", IMGOPEN, fullfile);
 		system(command);
+	} else {
+		snprintf(command, sizeof(command), "%s %s", CODEOPEN, fullfile);
+		system(command);
 	}
 }
 
