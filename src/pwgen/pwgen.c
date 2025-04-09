@@ -8,7 +8,8 @@ void helpmessage() {
 	printf("\033[1;0musage: pwgen [flags] [password lenght] [amount of passwords]\n");
 	printf("\n");
 	printf("flags:\n");
-	printf("-h: displays this help message\n\n");
+	printf("-h: displays this help message\n");
+	printf("\n");
 }
 
 int randomnumber(int max) {
