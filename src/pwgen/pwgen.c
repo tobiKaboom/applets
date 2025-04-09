@@ -3,13 +3,13 @@
 #include <time.h>
 
 void helpmessage() {
-	printf("\033[1;0m\n");
-	printf("\033[1;33mpwgen - generate (insecure) passwords!\n");
-	printf("\033[1;0musage: pwgen [flags] [password lenght] [amount of passwords]\n");
-	printf("\n");
-	printf("flags:\n");
-	printf("-h: displays this help message\n");
-	printf("\n");
+	printf("  \033[1;0m\n");
+	printf("  \033[1;33mpwgen - generate (insecure) passwords!\n");
+	printf("  \033[1;0musage: pwgen [flags] [password lenght] [amount of passwords]\n");
+	printf("  \n");
+	printf("  flags:\n");
+	printf("  -h: displays this help message\n");
+	printf("  \n");
 }
 
 int randomnumber(int max) {
